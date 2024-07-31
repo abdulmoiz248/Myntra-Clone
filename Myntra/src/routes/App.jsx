@@ -7,10 +7,12 @@ function App() {
   return (
     <div>
         <Header/>
+      
+       <main className='pt-20'>
+       <Outlet/>
+       </main>
         
-        <Outlet/>
-        
-        {/* <Footer/> */}
+        <Footer/>
     </div>
   )
 }

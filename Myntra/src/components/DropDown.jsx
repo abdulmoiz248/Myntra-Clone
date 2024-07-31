@@ -4,7 +4,7 @@ import DropDownItems from './DropDownItems';
 export default function DropDown({list}) {
          
   return (
-    <div className='absolute flex  bg-white z-10'>
+    <div className='absolute flex  bg-white '>
       {list.map((item)=>(
   
          <DropDownItems key={item.name} name={item.name} items={item.items} />
