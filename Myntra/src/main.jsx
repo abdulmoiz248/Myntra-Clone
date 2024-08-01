@@ -5,6 +5,10 @@ import './index.css'
 import  {RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Bag from './routes/Bag.jsx'
 import Main from './routes/Main.jsx'
+import { Provider } from 'react-redux'
+import {store} from './store/index.js';
+import Loader from './components/Loader.jsx'
+
 const router=createBrowserRouter([
    {
     path: '/',
@@ -12,7 +16,8 @@ const router=createBrowserRouter([
     children:[
       {
          path:'/',
-         element: <Main />
+         element: <Main />,
+        //  loader: <Loader/>
       },
       {
        path:'/bag',
@@ -25,6 +30,8 @@ const router=createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Provider store={store}>
    <RouterProvider router={router}></RouterProvider>
+   </Provider>
   </React.StrictMode>,
 )
