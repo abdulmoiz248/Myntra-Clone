@@ -10,20 +10,19 @@ export default function Fetching() {
 
     useEffect(()=>{
         if(fetchStatus.fetched) return;
-        console.log('Fetching'+fetchStatus.fetched);
+       
         dispatch(FetchActions.setFetching(true))
         const controller=new AbortController();
         const signal=controller.signal;
 
         fetch("http://localhost:8080/items",{signal}).then(
             (res)=>res.json().then(({items})=>{
-                console.log(items[0]);
              dispatch(ItemActions.addInitialItem(items[0]));
             dispatch(FetchActions.setFetching(false))
-            console.log('inside fetch'+fetchStatus.fetched);
+          
             })
         );
-        console.log('Fetched'+fetchStatus.fetched);
+      
        dispatch(FetchActions.addFetched())
         
      //   return ()=> controller.abort();
@@ -31,8 +30,8 @@ export default function Fetching() {
     },[fetchStatus]);
 
   return (
-    <div>
+    <>
     
-    </div>
+    </>
   )
 }
