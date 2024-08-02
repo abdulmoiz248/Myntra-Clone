@@ -7,8 +7,10 @@ export const FetchSlice=createSlice({
         fetching:false
     },
     reducers:{
-      addFetched:(state)=>{state.fetched=true;},
-      setFetching:(state)=>{state.fetching= !state.fetching;}
+      addFetched:(state)=>{
+        state.fetched=true;
+      },
+      setFetching:(state,action)=>{state.fetching= action.payload;}
     }
 });
 

@@ -3,15 +3,20 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import {Outlet } from'react-router-dom';
 import Fetching from '../components/Fetching';
+import { useSelector } from 'react-redux';
+import Loader from '../components/Loader';
 function App() {
- 
+   let fetchStatus=useSelector(store=>store.fetch);
+
   return (
     <div>
-        <Fetching/>
+      
         <Header/>
-        
+        <Fetching/>
        <main className='pt-20'>
-       <Outlet/>
+       {fetchStatus.fetching ? <Loader/>: <Outlet/>}  
+      
+
        </main>
         
         <Footer/>

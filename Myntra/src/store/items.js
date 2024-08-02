@@ -5,8 +5,7 @@ export const itemSlice=createSlice({
     initialState: [],
     reducers:{
         addInitialItem: (store,action)=>{
-            console.log(store);
-            console.log(action);
+           
          return [action.payload];   
         }
     }
