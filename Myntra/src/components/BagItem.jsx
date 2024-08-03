@@ -1,15 +1,15 @@
 import React from 'react'
 import BagCard from './BagCard'
-export default function BagItem() {
-    const item={
-        img:'images/1.jpg'
-    }
+import MainCards from './MainCards';
+import {useSelector} from 'react-redux';
+export default function BagItem({items}) {
+    //let items=useSelector(store=>store.bag)
+  
   return (
-    <div>
-        
-        <BagCard item={item}></BagCard>
-
-
+    <div className='block w-[50%] ml-10'>
+     { items.map((item)=>(
+           <BagCard key={item.id} item={item}/>
+      ))}
     </div>
   )
 }

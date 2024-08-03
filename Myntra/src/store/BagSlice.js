@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 let bagSlice=createSlice(
    {
    name:'Bag',
@@ -11,11 +10,15 @@ let bagSlice=createSlice(
     },
     removeItem: (state,action)=>{
         return state.filter(item=>item.id!==action.payload);
+    },
+    checkout:(state)=>{
+       return [];
     }
+
 
    }
 }
 );
 
-export default bagSlice.reducer;
+export default bagSlice;
 export const BagActions=bagSlice.actions;

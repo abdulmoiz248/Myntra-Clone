@@ -1,6 +1,8 @@
 import React from 'react'
+import { BagActions } from '../store/BagSlice'
+import { useDispatch } from 'react-redux';
 export default function MainCards({item}) {
-  console.log(item.image);
+  let dispatch=useDispatch();
   return (
     <div className="p-4 border rounded shadow-sm w-1/3 border-blue-300">
     <img src={`/${item.image}`} alt={`${item.id}`} className="w-full h-48 object-contain mb-4" />
@@ -12,7 +14,11 @@ export default function MainCards({item}) {
     <p className="mb-2">Return Period: {item.return_period} days</p>
     <p className="mb-2">Rating: {item.rating.stars} stars ({item.rating.count} reviews)</p>
     <center>
-    <button className="mt-2 inline-block px-11 py-4 bg-blue-400 rounded-full shadow-md shadow-blue-400 text-lg font-semibold text-gray-900 tracking-wider transition duration-500 ease-in-out hover:shadow-none">
+    <button onClick={()=>{
+
+    dispatch(BagActions.addItem(item));
+    }}
+    className="mt-2 inline-block px-11 py-4 bg-blue-400 rounded-full shadow-md shadow-blue-400 text-lg font-semibold text-gray-900 tracking-wider transition duration-500 ease-in-out hover:shadow-none">
       Add to <span className="text-white">Cart</span>
     </button>
     </center>
