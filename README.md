@@ -10,12 +10,17 @@ This project is a clone of the Myntra clothing shop website, created using React
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **React Router**: A library for routing in React applications.
 
-##Home Page
+## Home Page
 ![image](https://github.com/user-attachments/assets/c955b678-07da-473f-9ba9-0801928f985c)
 ![image](https://github.com/user-attachments/assets/ce0366b5-22eb-40bf-909b-75da68e505a3)
 ![image](https://github.com/user-attachments/assets/8fab0d8b-5250-4f90-9704-9798537bb7fe)
 ![image](https://github.com/user-attachments/assets/8054d3bb-eaa1-4b19-add9-070593d9ee84)
 ![image](https://github.com/user-attachments/assets/5ec63166-774e-4d36-bb4d-76a5b36f7f90)
+
+## Bag Page
+![image](https://github.com/user-attachments/assets/cd2149fd-3f17-46bd-94b2-87625ea87273)
+![image](https://github.com/user-attachments/assets/c91bb7c5-5582-4c4b-a80a-bf3e59f14bbf)
+
 
 
 
